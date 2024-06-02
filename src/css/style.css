@@ -28,7 +28,6 @@ html {
 
 body {
     background-image: url("/Anniversary/src/img/bg.jpg");
-    background-color: var(--bg-color);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -123,7 +122,6 @@ h1 {
 
     body {
         background-size: contain; 
-        background-attachment: scroll; 
     }
 
     h1 {
