@@ -24,10 +24,10 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
-    background-image: url("/Anniversary/src/img/bg.jpg");
 }
 
 body {
+    background-image: url("/Anniversary/src/img/bg.jpg");
     background-color: var(--bg-color);
     background-size: cover;
     background-position: center;
