@@ -118,11 +118,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
     #countdown {
-        font-size: 3rem; 
-    }
-
-    body {
-        background-size: contain; 
+        font-size: 3rem;
     }
 
     h1 {
@@ -132,19 +128,29 @@ h1 {
     section {
         margin-bottom: 2rem;
     }
+
+    body {
+        background-size: contain;
+    }
 }
+
 
 @media screen and (max-width: 480px) {
     #countdown {
-        font-size: 3rem; 
+        font-size: 3rem;
     }
 
     h1 {
-        font-size: 3rem; 
-        margin-bottom: 0.5rem; 
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
     }
 
     section {
-        margin-bottom: 0.5rem; 
+        margin-bottom: 0.5rem;
+    }
+
+    body {
+        background-size: contain;
+        background-attachment: scroll;
     }
 }
