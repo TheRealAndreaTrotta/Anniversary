@@ -19,7 +19,7 @@
 :root {
     --bg-color: #111;
     --main-color: #dc143c;
-    --font-family: serif;
+    --font-family: fantasy, serif;
 }
 
 html {
