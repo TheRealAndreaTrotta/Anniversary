@@ -2,7 +2,7 @@
     font-size: 4em;
     color: var(--main-color);
     text-align: center;
-    font-family: fantasy, serif;
+    font-family: var(--font-family);
     font-weight: bolder;
 }
 
@@ -19,6 +19,7 @@
 :root {
     --bg-color: #111;
     --main-color: #dc143c;
+    --font-family: serif;
 }
 
 html {
@@ -50,7 +51,7 @@ div {
 
 h1 {
     font-size: 40px;
-    font-family: fantasy, serif;
+    font-family: var(--font-family);
     font-weight: bold;
 }
 
