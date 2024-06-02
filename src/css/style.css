@@ -27,7 +27,6 @@ html {
 }
 
 body {
-    background-image: url('src/img/bg.jpg');
     background-color: var(--bg-color);
     background-size: cover;
     background-position: center;
