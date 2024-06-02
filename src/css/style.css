@@ -43,6 +43,8 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 div {
