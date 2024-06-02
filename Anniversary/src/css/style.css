@@ -1,0 +1,117 @@
+#countdown {
+    font-size: 4em;
+    color: var(--main-color);
+    text-align: center;
+    font-family: fantasy;
+    font-weight: bolder;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #111;
+    --main-color: #dc143c;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url('/Web/Anniversary/src/img/bg.HEIC');
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+div {
+    margin-bottom: 50px; 
+}
+
+h1 {
+    font-size: 40px;
+    font-family: fantasy;
+    font-weight: bold;
+}
+
+
+.counter {
+    text-align: center;
+    font-size: 5rem;
+    color: white;
+}
+
+.heart-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+
+.red-heart {
+    background: var(--main-color);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: heartbeat 1s infinite;
+}
+
+.red-heart::before,
+.red-heart::after {
+    content: "";
+    background: var(--main-color);
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+.red-heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.red-heart::after {
+    left: 50px;
+    top: 0;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1) rotate(-45deg);
+    }
+    25% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(-45deg);
+    }
+    75% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+}
