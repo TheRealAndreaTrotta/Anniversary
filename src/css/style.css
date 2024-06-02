@@ -2,7 +2,7 @@
     font-size: 4em;
     color: var(--main-color);
     text-align: center;
-    font-family: fantasy;
+    font-family: fantasy, serif;
     font-weight: bolder;
 }
 
@@ -27,6 +27,7 @@ html {
 }
 
 body {
+    background-image: url("/Anniversary/src/img/bg.jpg");
     background-color: var(--bg-color);
     background-size: cover;
     background-position: center;
@@ -48,7 +49,7 @@ div {
 
 h1 {
     font-size: 40px;
-    font-family: fantasy;
+    font-family: fantasy, serif;
     font-weight: bold;
 }
 
