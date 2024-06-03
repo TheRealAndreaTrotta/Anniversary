@@ -46,6 +46,27 @@ function getNextCountdownDate(day) {
 
 const specificDay = 4;
 
+function showLoveMessage() {
+    const loveMessages = [
+        "I FREAKING LOVE YOU DARLING!",
+        "YOU MEAN EVERYTHING TO ME!",
+        "YOU ARE MY SUNSHINE!",
+        "YOU MAKE MY WORLD BRIGHTER!",
+        "YOU ARE MY ROCK!",
+        "I AM SO LUCKY TO HAVE YOU!",
+        "MY LOVE FOR YOU IS ENDLESS!",
+        "YOU COMPLETE ME!",
+        "YOU ARE MY EVERYTHING!",
+        "YOU ARE THE BEST THING IN MY LIFE!",
+        "YOU LIGHT UP MY LIFE!",
+        "I LOVE YOU MORE THAN WORDS CAN EXPRESS!"
+    ];
+
+    const currentMonth = new Date().getMonth();
+    const selectedMessage = loveMessages[currentMonth % loveMessages.length];
+    document.getElementById("countdown").innerHTML = selectedMessage;
+}
+
 function startMonthlyCountdown() {
     const countDownDate = getNextCountdownDate(specificDay).getTime();
 
@@ -55,26 +76,7 @@ function startMonthlyCountdown() {
 
         if (distance < 0) {
             clearInterval(x);
-
-            const loveMessages = [
-                "I FREAKING LOVE YOU DARLING!",
-                "YOU MEAN EVERYTHING TO ME!",
-                "YOU ARE MY SUNSHINE!",
-                "YOU MAKE MY WORLD BRIGHTER!",
-                "YOU ARE MY ROCK!",
-                "I AM SO LUCKY TO HAVE YOU!",
-                "MY LOVE FOR YOU IS ENDLESS!",
-                "YOU COMPLETE ME!",
-                "YOU ARE MY EVERYTHING!",
-                "YOU ARE THE BEST THING IN MY LIFE!",
-                "YOU LIGHT UP MY LIFE!",
-                "I LOVE YOU MORE THAN WORDS CAN EXPRESS!"
-            ];
-
-            const currentMonth = new Date().getMonth();
-            const selectedMessage = loveMessages[currentMonth % loveMessages.length];
-
-            document.getElementById("countdown").innerHTML = selectedMessage;
+            showLoveMessage();
 
             setTimeout(function() {
                 startMonthlyCountdown();
@@ -95,18 +97,17 @@ function startMonthlyCountdown() {
     }, 1000);
 }
 
-// Avvia il countdown mensile
-startMonthlyCountdown();
-
-// Avvia l'aggiornamento del tempo trascorso
-updatePassedTime("2024-04-04");
+document.addEventListener("DOMContentLoaded", function() {
+    const now = new Date();
+    if (now.getDate() === specificDay) {
+        showLoveMessage();
+    } else {
+        startMonthlyCountdown();
+    }
+    updatePassedTime("2024-04-04");
+});
 
 // Aggiorna il tempo trascorso ogni minuto
 setInterval(function() {
     updatePassedTime("2024-04-04");
 }, 60000); // 60000 millisecondi = 1 minuto
-
-// Aggiorna il tempo trascorso immediatamente all'avvio della pagina
-document.addEventListener("DOMContentLoaded", function() {
-    updatePassedTime("2024-04-04");
-});
