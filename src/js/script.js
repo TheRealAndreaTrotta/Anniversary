@@ -110,4 +110,4 @@ document.addEventListener("DOMContentLoaded", function() {
 // Aggiorna il tempo trascorso ogni minuto
 setInterval(function() {
     updatePassedTime("2024-04-04");
-}, 60000); // 60000 millisecondi = 1 minuto
+}, 60000); 
